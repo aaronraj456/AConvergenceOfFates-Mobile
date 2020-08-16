@@ -91,7 +91,7 @@ function preload() {
   LavaCave1 = loadImage("Photos/LavaCave1.png");
   LavaCave2 = loadImage("Photos/LavaCave2.png");
   lushtree = loadImage("Photos/LushfruitTreeT1.png");
-  oldSword = loadImage("Photos/oldSword.png");
+  oldSword = loadImage("Photos/OldSword.png");
   fossilTooth = loadImage("Photos/Tooth.png");
 }
 
