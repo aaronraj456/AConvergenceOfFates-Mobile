@@ -117,7 +117,6 @@ function setup() {
   );
 
   skill1 = createButton("Fire");
-  //skill1.position(800,450);
   skill1.mousePressed(() => {
     flag = true;
   });
@@ -146,19 +145,17 @@ function setup() {
 
   zoneMode = 0;
   bgState = "Forest";
-  //getBackgroundImage(bgState);
+  getBackgroundImage(bgState);
 }
 
 function draw() {
-  //background(bgImage);
-  //getBackgroundImage(bgState);
+  background(bgImage);
   Engine.update(engine);
 
   ground.display();
   player.display();
   object1.display();
 
-  //getBackgroundImage(bgState);
   if(flag = true){
     fire.display();
   }
@@ -189,11 +186,11 @@ function draw() {
   // Forest1 // CrystalCave1, // CrystalCave2 //Desert1
 
   if (player.body.position.x >= 1000) {
-    //setBgState(bgState);
+    setBgState(bgState);
     playerX = 50;
     playerY = 440;
     Matter.Body.setPosition(player.body, { x: playerX, y: playerY });
-    //getBackgroundImage(bgState);
+    getBackgroundImage(bgState);
   }
 
  
@@ -259,6 +256,21 @@ function setBgState(state) {
       break;
     case "Forest3":
       bgState = "CrystalCave1";
+      break;
+    case "CrystalCave1":
+      bgState = "CrystalCave2";
+      break;
+    case "CrystalCave2":
+      bgState = "CrystalCave3";
+      break;
+    case "CrystalCave3":
+      bgState = "Desert1";
+      break;
+    case "Desert1":
+      bgState = "Desert2";
+      break;
+    case "Desert2":
+      bgState = "Desert3";
       break;
     default:
       bgState = "Forest";
