@@ -65,7 +65,7 @@ var bgState;
 
 function preload() {
   backg1 = loadImage("Photos/back1.jpg");
-  forestNight = loadImage("Photos/backNight.JPG");
+  forestNight = loadImage("Photos/backNight.jpg");
   painting = loadImage("Photos/prophet'sPaint.png");
   fireSkill = loadImage("Photos/FireButton.png");
   Forest1 = loadImage("Photos/SecretForest1.png");
